@@ -1,0 +1,4 @@
+<map id="CompositeFactory" name="CompositeFactory">
+<area shape="rect" id="node1" title="Composite factory class, holds different factories to call from." alt="" coords="5,80,145,107"/>
+<area shape="rect" id="node2" href="$classIEntityFactory.html" title="A class for factory classes to inherit from." alt="" coords="19,5,131,32"/>
+</map>

@@ -1,0 +1,116 @@
+\hypertarget{classDfsStrategy}{}\doxysection{Dfs\+Strategy Class Reference}
+\label{classDfsStrategy}\index{DfsStrategy@{DfsStrategy}}
+
+
+this class inhertis from the \mbox{\hyperlink{classIStrategy}{I\+Strategy}} class and is responsible for generating the beeline that the drone will take.  
+
+
+
+
+{\ttfamily \#include $<$Dfs\+Strategy.\+h$>$}
+
+
+
+Inheritance diagram for Dfs\+Strategy\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=154pt]{classDfsStrategy__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Dfs\+Strategy\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=154pt]{classDfsStrategy__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classDfsStrategy_ac62cd4f89c6d75a4a719397cfb187afa}{Dfs\+Strategy}} (\mbox{\hyperlink{classVector3}{Vector3}} position, \mbox{\hyperlink{classVector3}{Vector3}} destination, const I\+Graph $\ast$graph)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classDfsStrategy_aa7e5c9681810fcc22194268b2ddce21e}\label{classDfsStrategy_aa7e5c9681810fcc22194268b2ddce21e}} 
+\mbox{\hyperlink{classDfsStrategy_aa7e5c9681810fcc22194268b2ddce21e}{$\sim$\+Dfs\+Strategy}} ()
+\begin{DoxyCompactList}\small\item\em Default destructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classDfsStrategy_aab5a0a5c97f710075634b81a3e00ecf9}{Move}} (\mbox{\hyperlink{classIEntity}{I\+Entity}} $\ast$entity, double dt)
+\begin{DoxyCompactList}\small\item\em Moves the entity to the destination using the dfs strategy. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classDfsStrategy_a30fb7b230d0244cd87de51a13a8d8c5b}{Is\+Completed}} ()
+\begin{DoxyCompactList}\small\item\em Checks whether the entity has reached the destination. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+this class inhertis from the \mbox{\hyperlink{classIStrategy}{I\+Strategy}} class and is responsible for generating the beeline that the drone will take. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classDfsStrategy_ac62cd4f89c6d75a4a719397cfb187afa}\label{classDfsStrategy_ac62cd4f89c6d75a4a719397cfb187afa}} 
+\index{DfsStrategy@{DfsStrategy}!DfsStrategy@{DfsStrategy}}
+\index{DfsStrategy@{DfsStrategy}!DfsStrategy@{DfsStrategy}}
+\doxysubsubsection{\texorpdfstring{DfsStrategy()}{DfsStrategy()}}
+{\footnotesize\ttfamily Dfs\+Strategy\+::\+Dfs\+Strategy (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classVector3}{Vector3}}}]{position,  }\item[{\mbox{\hyperlink{classVector3}{Vector3}}}]{destination,  }\item[{const I\+Graph $\ast$}]{graph }\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em position} & A \mbox{\hyperlink{classVector3}{Vector3}} representing the initial position \\
+\hline
+\mbox{\texttt{ in}}  & {\em destination} & A \mbox{\hyperlink{classVector3}{Vector3}} representing the final position \\
+\hline
+\mbox{\texttt{ in}}  & {\em graph} & An I\+Graph pointer that holds the graph \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classDfsStrategy_a30fb7b230d0244cd87de51a13a8d8c5b}\label{classDfsStrategy_a30fb7b230d0244cd87de51a13a8d8c5b}} 
+\index{DfsStrategy@{DfsStrategy}!IsCompleted@{IsCompleted}}
+\index{IsCompleted@{IsCompleted}!DfsStrategy@{DfsStrategy}}
+\doxysubsubsection{\texorpdfstring{IsCompleted()}{IsCompleted()}}
+{\footnotesize\ttfamily bool Dfs\+Strategy\+::\+Is\+Completed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Checks whether the entity has reached the destination. 
+
+\begin{DoxyReturn}{Returns}
+A boolean that represents whether the entity reached its destination 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classIStrategy_a13c6048efd232b696db5f35000d5b106}{I\+Strategy}}.
+
+\mbox{\Hypertarget{classDfsStrategy_aab5a0a5c97f710075634b81a3e00ecf9}\label{classDfsStrategy_aab5a0a5c97f710075634b81a3e00ecf9}} 
+\index{DfsStrategy@{DfsStrategy}!Move@{Move}}
+\index{Move@{Move}!DfsStrategy@{DfsStrategy}}
+\doxysubsubsection{\texorpdfstring{Move()}{Move()}}
+{\footnotesize\ttfamily void Dfs\+Strategy\+::\+Move (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classIEntity}{I\+Entity}} $\ast$}]{entity,  }\item[{double}]{dt }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Moves the entity to the destination using the dfs strategy. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em entity} & An \mbox{\hyperlink{classIEntity}{I\+Entity}} object that is the entity being moved \\
+\hline
+\mbox{\texttt{ in}}  & {\em dt} & The delta time that has passed since last update \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classIStrategy_a69254389f4ef9a851dc5d40c4cc9aacd}{I\+Strategy}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/kary0014/\+Desktop/csci-\/3081w-\/f22/\+Team-\/001-\/16-\/homework04/libs/transit/include/Dfs\+Strategy.\+h\item 
+/home/kary0014/\+Desktop/csci-\/3081w-\/f22/\+Team-\/001-\/16-\/homework04/libs/transit/src/Dfs\+Strategy.\+cc\end{DoxyCompactItemize}
