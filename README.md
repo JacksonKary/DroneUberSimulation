@@ -5,7 +5,7 @@
 Trips can be scheduled using different routing algorithms, including AStar, Depth First Search, and Dijkstra. Scheduling a trip involves choosing a name for the robot, a routing algorithm, and a specific start and end point. 
 Once a trip is scheduled, the drone, from whatever position it is currently in, will pick the robot up from the starting point and drop it off at the endpoint. However, the drones also have a limited amount of battery, which means that if the drone cannot complete a trip without charging, it finds a charging station first to recharge its battery. Pay attention when they reach the destination, there's a little surprise when they arrive! Also be sure to observe the environment, there are additional entities sharing this world.
 
-*This project was developed by myself and two others. Our development process was a modified version of Scrum*
+*This project was developed by myself and two others. Our development process was a modified version of Scrum.*
 
 
 ## Here are some video demonstrations of the final build:
