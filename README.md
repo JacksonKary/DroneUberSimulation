@@ -48,7 +48,7 @@ Navigate to http://127.0.0.1:8081 and you should see a visualization.
 Navigate to http://127.0.0.1:8081/schedule.html and you should see a page to schedule the trips.
 
 
-#### What is in this directory?
+## What is in this directory?
 <ul>
   <li>  <code>app</code> folder, which contains:
     <ul>
@@ -61,7 +61,11 @@ Navigate to http://127.0.0.1:8081/schedule.html and you should see a page to sch
       <li>  <code>transit</code> : entities properties
     </ul>
   <li>  <code>dependencies</code>
-  <li>  <code>docs</code> : doxygen documentation
+  <li>  <code>docs</code> : Doxygen documentation
   <li>  <code>pics</code> : a few UML diagrams for the two decorator patterns *note: there are many other design patterns in this project*
   
 </ul>
+
+
+## Documentation
+To view the detailed Doxygen documentation, navigate to: <code>docs/html/index.html</code>
