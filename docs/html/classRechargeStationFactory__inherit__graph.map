@@ -1,4 +1,0 @@
-<map id="RechargeStationFactory" name="RechargeStationFactory">
-<area shape="rect" id="node1" title="RechargeStationFactory class to make recharge stations." alt="" coords="5,80,183,107"/>
-<area shape="rect" id="node2" href="$classIEntityFactory.html" title="A class for factory classes to inherit from." alt="" coords="38,5,150,32"/>
-</map>

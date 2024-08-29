@@ -1,0 +1,63 @@
+\hypertarget{md__mnt_c_Users_17632_Desktop_DroneUberSimulation_README_autotoc_md1}{}\doxysubsubsection{This project is a drone Uber simulation, which simulates drones providing an Uber-\/like service for robots.}\label{md__mnt_c_Users_17632_Desktop_DroneUberSimulation_README_autotoc_md1}
+Trips can be scheduled using different routing algorithms, including A\+Star, Depth First Search, and Dijkstra. Scheduling a trip involves choosing a name for the robot, a routing algorithm, and a specific start and end point. Once a trip is scheduled, the drone, from whatever position it is currently in, will pick the robot up from the starting point and drop it off at the endpoint. However, the drones also have a limited amount of battery, which means that if the drone cannot complete a trip without charging, it finds a charging station first to recharge its battery. Pay attention when they reach the destination, there\textquotesingle{}s a little surprise when they arrive! Also be sure to observe the environment, there are additional entities sharing this world.
+
+{\itshape This project was developed by myself and two others. Our development process was a modified version of Scrum.}\hypertarget{md__mnt_c_Users_17632_Desktop_DroneUberSimulation_README_autotoc_md2}{}\doxysection{Here are some video demonstrations of the final build\+:}\label{md__mnt_c_Users_17632_Desktop_DroneUberSimulation_README_autotoc_md2}
+This first video shows a full trip with the camera focused on the drone. (The video was sped up significantly in post)
+
+\href{https://user-images.githubusercontent.com/117691954/208202504-aba3f2a9-beb6-4d4d-8e3f-401013b5b221.mp4}{\texttt{ https\+://user-\/images.\+githubusercontent.\+com/117691954/208202504-\/aba3f2a9-\/beb6-\/4d4d-\/8e3f-\/401013b5b221.\+mp4}}
+
+This second video shows a real-\/time scheduling of a trip, as well as the {\itshape add helicopter} feature.
+
+\href{https://user-images.githubusercontent.com/117691954/205541866-39ae0da9-16ed-4abb-bf8c-fb118ff52c3d.mp4}{\texttt{ https\+://user-\/images.\+githubusercontent.\+com/117691954/205541866-\/39ae0da9-\/16ed-\/4abb-\/bf8c-\/fb118ff52c3d.\+mp4}}
+
+The following video shows an instance where the drone\textquotesingle{}s battery was too low to handle the next trip, so it stopped off at a charging station first.
+
+\href{https://user-images.githubusercontent.com/117691954/208200732-93d0637a-1df3-4126-b7e2-78cf8206a57a.mp4}{\texttt{ https\+://user-\/images.\+githubusercontent.\+com/117691954/208200732-\/93d0637a-\/1df3-\/4126-\/b7e2-\/78cf8206a57a.\+mp4}}\hypertarget{md__mnt_c_Users_17632_Desktop_DroneUberSimulation_README_autotoc_md3}{}\doxysection{Instructions for running the simulation\+:}\label{md__mnt_c_Users_17632_Desktop_DroneUberSimulation_README_autotoc_md3}
+{\bfseries{Try it out for yourself!}}\hypertarget{md__mnt_c_Users_17632_Desktop_DroneUberSimulation_README_autotoc_md4}{}\doxysubsection{A full containerized version with instructions is available on my Docker Hub\+: https\+://hub.\+docker.\+com/repository/docker/jacksonkary917/drone\+\_\+final}\label{md__mnt_c_Users_17632_Desktop_DroneUberSimulation_README_autotoc_md4}
+\hypertarget{md__mnt_c_Users_17632_Desktop_DroneUberSimulation_README_autotoc_md5}{}\doxysubsubsection{Alternatively, you can build and run it yourself\+:}\label{md__mnt_c_Users_17632_Desktop_DroneUberSimulation_README_autotoc_md5}
+
+\begin{DoxyEnumerate}
+\item {\bfseries{Clone the Repository}}\+: First, clone this git repository into your directory of choice\+: \`{}\`{}\`{}bash git clone \href{mailto:git@github.com}{\texttt{ git@github.\+com}}\+:Jackson\+Kary/\+Drone\+Uber\+Simulation.\+git \`{}\`{}\`{}
+\item {\bfseries{Change Directory}}\+: Next, change your working directory to the newly created {\ttfamily Drone\+Uber\+Simulation} folder\+: \`{}\`{}\`{}bash cd Drone\+Uber\+Simulation \`{}\`{}\`{}
+\item {\bfseries{Build the Program}}\+: To build the program so it\textquotesingle{}s ready to run, use the following command\+: \`{}\`{}\`{}bash make -\/j \`{}\`{}\`{} \begin{quote}
+{\bfseries{Note}}\+: If your environment can\textquotesingle{}t execute the {\ttfamily make} command, you may need to install it first. On most Unix-\/based systems, you can install it using\+:\end{quote}
+
+\end{DoxyEnumerate}
+\begin{DoxyItemize}
+\item {\bfseries{Debian/\+Ubuntu}}\+: {\ttfamily sudo apt-\/get install build-\/essential}
+\item {\bfseries{Fedora}}\+: {\ttfamily sudo dnf groupinstall \char`\"{}\+Development Tools\char`\"{}}
+\item {\bfseries{mac\+OS}}\+: {\ttfamily xcode-\/select -\/-\/install} 
+\end{DoxyItemize}
+
+\begin{DoxyVerb}Any build warnings from the `make -j` command can be ignored.
+\end{DoxyVerb}
+
+
+
+\begin{DoxyEnumerate}
+\item {\bfseries{Run the Program!}}\+: To run the program, use the following command\+: \`{}\`{}\`{}bash ./build/bin/transit\+\_\+service 8081 apps/transit\+\_\+service/web/ \`{}\`{}\`{} You have the option to change the port (default is 8081).
+\item {\bfseries{Upon running}}\+:
+\begin{DoxyItemize}
+\item Navigate to \href{http://127.0.0.1:8081}{\texttt{ http\+://127.\+0.\+0.\+1\+:8081}} and you should see a visualization.
+\item In another tab, navigate to \href{http://127.0.0.1:8081/schedule.html}{\texttt{ http\+://127.\+0.\+0.\+1\+:8081/schedule.\+html}} and you should see a page to schedule the trips.
+\end{DoxyItemize}
+\end{DoxyEnumerate}\hypertarget{md__mnt_c_Users_17632_Desktop_DroneUberSimulation_README_autotoc_md6}{}\doxysection{What is in this directory?}\label{md__mnt_c_Users_17632_Desktop_DroneUberSimulation_README_autotoc_md6}
+
+\begin{DoxyItemize}
+\item {\ttfamily app} folder, which contains\+: 
+\begin{DoxyItemize}
+\item {\ttfamily graph\+\_\+viewer} \+: producing graph visualization 
+\item {\ttfamily transit\+\_\+service} \+: visualization 
+\end{DoxyItemize}
+\item {\ttfamily libs} folder, which contains\+: 
+\begin{DoxyItemize}
+\item {\ttfamily routing} \+: finding the paths 
+\item {\ttfamily transit} \+: entities properties 
+\end{DoxyItemize}
+\item {\ttfamily dependencies} 
+\item {\ttfamily docs} \+: Doxygen documentation 
+\item {\ttfamily pics} \+: a few U\+ML diagrams for the two decorator patterns {\itshape note\+: there are many other design patterns in this project}
+
+
+\end{DoxyItemize}\hypertarget{md__mnt_c_Users_17632_Desktop_DroneUberSimulation_README_autotoc_md7}{}\doxysection{Documentation}\label{md__mnt_c_Users_17632_Desktop_DroneUberSimulation_README_autotoc_md7}
+To view the detailed Doxygen documentation, navigate to\+: {\ttfamily docs/html/index.\+html} 

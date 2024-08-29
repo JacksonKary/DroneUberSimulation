@@ -1,0 +1,251 @@
+\hypertarget{classDuck}{}\doxysection{Duck Class Reference}
+\label{classDuck}\index{Duck@{Duck}}
+
+
+Inheritance diagram for Duck\+:
+% FIG 0
+
+
+Collaboration diagram for Duck\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classDuck_a45299aa13569c45ff174b2f51b8b4954}{Duck}} (Json\+Object \&obj)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classDuck_a8293179d083c105070d3dedb80fc0456}\label{classDuck_a8293179d083c105070d3dedb80fc0456}} 
+\mbox{\hyperlink{classDuck_a8293179d083c105070d3dedb80fc0456}{$\sim$\+Duck}} () override=default
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classVector3}{Vector3}} \mbox{\hyperlink{classDuck_af8c00ef5f5ee38b9cb77e39a2fcdd2e1}{Get\+Position}} () const
+\begin{DoxyCompactList}\small\item\em Gets the position of the entity. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classVector3}{Vector3}} \mbox{\hyperlink{classDuck_aee59ad76ac3c32b7376e90d5f33ec171}{Get\+Direction}} () const
+\begin{DoxyCompactList}\small\item\em Gets the direction of the entity. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classVector3}{Vector3}} \mbox{\hyperlink{classDuck_afc9ebe47d5e968c91189ccfb3593fb83}{Get\+Destination}} () const
+\begin{DoxyCompactList}\small\item\em Gets the destination of the entity. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classDuck_aaf8a89a71719ee8eefd1b6d8a54086ad}{Set\+Position}} (\mbox{\hyperlink{classVector3}{Vector3}} pos\+\_\+)
+\begin{DoxyCompactList}\small\item\em Sets the position of the entity. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classDuck_a7fd322fbac7af9d492a62fb243807f34}{Set\+Direction}} (\mbox{\hyperlink{classVector3}{Vector3}} dir\+\_\+)
+\begin{DoxyCompactList}\small\item\em Sets the direction of the entity. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classDuck_acc711e64d7e102c33afae667d6928ab8}{Set\+Destination}} (\mbox{\hyperlink{classVector3}{Vector3}} des\+\_\+)
+\begin{DoxyCompactList}\small\item\em Sets the destination of the entity. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classDuck_a9a99c8753510b4db552ee5e41542d22b}{Update}} (double dt, std\+::vector$<$ \mbox{\hyperlink{classIEntity}{I\+Entity}} $\ast$ $>$ scheduler)
+\begin{DoxyCompactList}\small\item\em Updates the entity in the simulation. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classDuck_a0e7a8cdb26ba0536f5897d05618169a4}{Get\+Speed}} () const
+\begin{DoxyCompactList}\small\item\em Gets the speed of the entity. \end{DoxyCompactList}\item 
+Json\+Object \mbox{\hyperlink{classDuck_ac0ee9076cd4ff24110dbe8ad87f463df}{Get\+Details}} () const
+\begin{DoxyCompactList}\small\item\em Gets the json information of the entity. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classDuck_a1ec598af7bf50478948f1eeeaaaa90e8}{Rotate}} (double angle)
+\begin{DoxyCompactList}\small\item\em Rotates the entity. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classDuck_a68143e73186711d471a4df69f59755da}\label{classDuck_a68143e73186711d471a4df69f59755da}} 
+void \mbox{\hyperlink{classDuck_a68143e73186711d471a4df69f59755da}{Complete}} ()
+\begin{DoxyCompactList}\small\item\em Stops \mbox{\hyperlink{classDuck}{Duck}} from trying to update position upon reaching destination. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classDuck_a45299aa13569c45ff174b2f51b8b4954}\label{classDuck_a45299aa13569c45ff174b2f51b8b4954}} 
+\index{Duck@{Duck}!Duck@{Duck}}
+\index{Duck@{Duck}!Duck@{Duck}}
+\doxysubsubsection{\texorpdfstring{Duck()}{Duck()}}
+{\footnotesize\ttfamily Duck\+::\+Duck (\begin{DoxyParamCaption}\item[{Json\+Object \&}]{obj }\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em obj} & Json\+Object that represents info on the entity \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classDuck_afc9ebe47d5e968c91189ccfb3593fb83}\label{classDuck_afc9ebe47d5e968c91189ccfb3593fb83}} 
+\index{Duck@{Duck}!GetDestination@{GetDestination}}
+\index{GetDestination@{GetDestination}!Duck@{Duck}}
+\doxysubsubsection{\texorpdfstring{GetDestination()}{GetDestination()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classVector3}{Vector3}} Duck\+::\+Get\+Destination (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Gets the destination of the entity. 
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{classVector3}{Vector3}} that is the destination 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classIEntity_a0dcaf865938ab1fb49c8389b5e580d90}{I\+Entity}}.
+
+\mbox{\Hypertarget{classDuck_ac0ee9076cd4ff24110dbe8ad87f463df}\label{classDuck_ac0ee9076cd4ff24110dbe8ad87f463df}} 
+\index{Duck@{Duck}!GetDetails@{GetDetails}}
+\index{GetDetails@{GetDetails}!Duck@{Duck}}
+\doxysubsubsection{\texorpdfstring{GetDetails()}{GetDetails()}}
+{\footnotesize\ttfamily Json\+Object Duck\+::\+Get\+Details (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Gets the json information of the entity. 
+
+\begin{DoxyReturn}{Returns}
+A Json\+Object that contains information on the entity 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classIEntity_a97c799400ce05e2ff2566adc4d7b9634}{I\+Entity}}.
+
+\mbox{\Hypertarget{classDuck_aee59ad76ac3c32b7376e90d5f33ec171}\label{classDuck_aee59ad76ac3c32b7376e90d5f33ec171}} 
+\index{Duck@{Duck}!GetDirection@{GetDirection}}
+\index{GetDirection@{GetDirection}!Duck@{Duck}}
+\doxysubsubsection{\texorpdfstring{GetDirection()}{GetDirection()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classVector3}{Vector3}} Duck\+::\+Get\+Direction (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Gets the direction of the entity. 
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{classVector3}{Vector3}} that is the direction 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classIEntity_aa99a8fef8b22195a5113c38ef51f086d}{I\+Entity}}.
+
+\mbox{\Hypertarget{classDuck_af8c00ef5f5ee38b9cb77e39a2fcdd2e1}\label{classDuck_af8c00ef5f5ee38b9cb77e39a2fcdd2e1}} 
+\index{Duck@{Duck}!GetPosition@{GetPosition}}
+\index{GetPosition@{GetPosition}!Duck@{Duck}}
+\doxysubsubsection{\texorpdfstring{GetPosition()}{GetPosition()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classVector3}{Vector3}} Duck\+::\+Get\+Position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Gets the position of the entity. 
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{classVector3}{Vector3}} that is the position 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classIEntity_a9bc32587aab91761fc0e718612498199}{I\+Entity}}.
+
+\mbox{\Hypertarget{classDuck_a0e7a8cdb26ba0536f5897d05618169a4}\label{classDuck_a0e7a8cdb26ba0536f5897d05618169a4}} 
+\index{Duck@{Duck}!GetSpeed@{GetSpeed}}
+\index{GetSpeed@{GetSpeed}!Duck@{Duck}}
+\doxysubsubsection{\texorpdfstring{GetSpeed()}{GetSpeed()}}
+{\footnotesize\ttfamily float Duck\+::\+Get\+Speed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Gets the speed of the entity. 
+
+\begin{DoxyReturn}{Returns}
+A float that is the speed 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classIEntity_a6520d2b1dc71d092bab38ef9f5cc9ff4}{I\+Entity}}.
+
+\mbox{\Hypertarget{classDuck_a1ec598af7bf50478948f1eeeaaaa90e8}\label{classDuck_a1ec598af7bf50478948f1eeeaaaa90e8}} 
+\index{Duck@{Duck}!Rotate@{Rotate}}
+\index{Rotate@{Rotate}!Duck@{Duck}}
+\doxysubsubsection{\texorpdfstring{Rotate()}{Rotate()}}
+{\footnotesize\ttfamily void Duck\+::\+Rotate (\begin{DoxyParamCaption}\item[{double}]{angle }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Rotates the entity. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em angle} & The angle to rotate by \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classIEntity_a4c109baa4179c28422623a7d3b2e9f82}{I\+Entity}}.
+
+\mbox{\Hypertarget{classDuck_acc711e64d7e102c33afae667d6928ab8}\label{classDuck_acc711e64d7e102c33afae667d6928ab8}} 
+\index{Duck@{Duck}!SetDestination@{SetDestination}}
+\index{SetDestination@{SetDestination}!Duck@{Duck}}
+\doxysubsubsection{\texorpdfstring{SetDestination()}{SetDestination()}}
+{\footnotesize\ttfamily void Duck\+::\+Set\+Destination (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classVector3}{Vector3}}}]{des\+\_\+ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Sets the destination of the entity. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em des\+\_\+} & \mbox{\hyperlink{classVector3}{Vector3}} that is the destination to set \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classIEntity_aa473000823f673e9d7b89aed3cd3fc5c}{I\+Entity}}.
+
+\mbox{\Hypertarget{classDuck_a7fd322fbac7af9d492a62fb243807f34}\label{classDuck_a7fd322fbac7af9d492a62fb243807f34}} 
+\index{Duck@{Duck}!SetDirection@{SetDirection}}
+\index{SetDirection@{SetDirection}!Duck@{Duck}}
+\doxysubsubsection{\texorpdfstring{SetDirection()}{SetDirection()}}
+{\footnotesize\ttfamily void Duck\+::\+Set\+Direction (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classVector3}{Vector3}}}]{dir\+\_\+ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Sets the direction of the entity. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em dir\+\_\+} & \mbox{\hyperlink{classVector3}{Vector3}} that is the direction to set \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classIEntity_a64bfaa448a929ca71693ff3e2edb9d97}{I\+Entity}}.
+
+\mbox{\Hypertarget{classDuck_aaf8a89a71719ee8eefd1b6d8a54086ad}\label{classDuck_aaf8a89a71719ee8eefd1b6d8a54086ad}} 
+\index{Duck@{Duck}!SetPosition@{SetPosition}}
+\index{SetPosition@{SetPosition}!Duck@{Duck}}
+\doxysubsubsection{\texorpdfstring{SetPosition()}{SetPosition()}}
+{\footnotesize\ttfamily void Duck\+::\+Set\+Position (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classVector3}{Vector3}}}]{pos\+\_\+ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Sets the position of the entity. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em pos\+\_\+} & \mbox{\hyperlink{classVector3}{Vector3}} that is the position to set \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classIEntity_af0475048b09dc13ed6cf8e7c7be2ae6b}{I\+Entity}}.
+
+\mbox{\Hypertarget{classDuck_a9a99c8753510b4db552ee5e41542d22b}\label{classDuck_a9a99c8753510b4db552ee5e41542d22b}} 
+\index{Duck@{Duck}!Update@{Update}}
+\index{Update@{Update}!Duck@{Duck}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void Duck\+::\+Update (\begin{DoxyParamCaption}\item[{double}]{dt,  }\item[{std\+::vector$<$ \mbox{\hyperlink{classIEntity}{I\+Entity}} $\ast$ $>$}]{scheduler }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Updates the entity in the simulation. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em dt} & The delta time elapsed since the last update \\
+\hline
+\mbox{\texttt{ in}}  & {\em scheduler} & The vector of all the entities in the simulation \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classIEntity_a9a8e8588fd85c7b0d813d60686d4dc2c}{I\+Entity}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/mnt/c/\+Users/17632/\+Desktop/\+Drone\+Uber\+Simulation/libs/transit/include/Duck.\+h\item 
+/mnt/c/\+Users/17632/\+Desktop/\+Drone\+Uber\+Simulation/libs/transit/src/Duck.\+cc\end{DoxyCompactItemize}

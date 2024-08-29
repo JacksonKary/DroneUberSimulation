@@ -1,6 +1,0 @@
-<map id="SimulationModel" name="SimulationModel">
-<area shape="rect" id="node1" title="Simulation Model handling the transit simulation. The model can communicate with the controller." alt="" coords="80,171,212,197"/>
-<area shape="rect" id="node2" href="$classCompositeFactory.html" title="Composite factory class, holds different factories to call from." alt="" coords="5,81,145,108"/>
-<area shape="rect" id="node3" href="$classIEntityFactory.html" title="A class for factory classes to inherit from." alt="" coords="19,5,131,32"/>
-<area shape="rect" id="node4" href="$classIController.html" title="Abstract controller class used in the Transit Service. Uses the Model View Controller Pattern." alt="" coords="170,81,261,108"/>
-</map>

@@ -74,6 +74,22 @@ $( document ).ready(function() {
 
             var vector = new THREE.Vector3( 0, 1, 0 );
             vector = model.worldToLocal(vector);
+            
+            if(e.color) {
+              model.children[0].traverse((o) => {
+                if(o.isMesh) {
+                  c = o.userData.defaultColor.clone();
+                  c.multiply(new THREE.Color(e.color));
+                  o.material.color.set(c);
+                }
+              });
+            } else {
+              model.children[0].traverse((o) => {
+                if(o.isMesh) {
+                  o.material.color.set(o.userData.defaultColor);
+                }
+              })
+            }
 
             var adjustedDirVector = model.localToWorld(new THREE.Vector3(0,0,0)).add(dir);
             model.lookAt(adjustedDirVector);
@@ -427,6 +443,12 @@ const onLoad = ( gltf, position, scale, start, duration, details, id ) => {
     group.offset = new THREE.Vector3(0.0, 0.0, 0.0);
   }
 
+  group.traverse((o) => {
+    if(o.isMesh) {
+      o.userData.defaultColor = o.material.color.clone();
+    }
+  });
+  
   models.push(group);
   scene.add( group );
   entities[id] = group;

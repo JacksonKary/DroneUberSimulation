@@ -1,6 +1,7 @@
 var searchData=
 [
-  ['dfsstrategy_126',['DfsStrategy',['../classDfsStrategy.html#ac62cd4f89c6d75a4a719397cfb187afa',1,'DfsStrategy']]],
-  ['dijkstrastrategy_127',['DijkstraStrategy',['../classDijkstraStrategy.html#acdfffc5f1d32914d4e3944640e11e50e',1,'DijkstraStrategy']]],
-  ['drone_128',['Drone',['../classDrone.html#ae182c9500fdd3c896ed460004b1b42ad',1,'Drone::Drone(JsonObject &amp;obj)'],['../classDrone.html#af60150a86c9fbe79ef1995e9b401b46b',1,'Drone::Drone(const Drone &amp;drone)=delete']]]
+  ['dfsstrategy_134',['DfsStrategy',['../classDfsStrategy.html#ac62cd4f89c6d75a4a719397cfb187afa',1,'DfsStrategy']]],
+  ['dijkstrastrategy_135',['DijkstraStrategy',['../classDijkstraStrategy.html#acdfffc5f1d32914d4e3944640e11e50e',1,'DijkstraStrategy']]],
+  ['drone_136',['Drone',['../classDrone.html#ae182c9500fdd3c896ed460004b1b42ad',1,'Drone::Drone(JsonObject &amp;obj)'],['../classDrone.html#af60150a86c9fbe79ef1995e9b401b46b',1,'Drone::Drone(const Drone &amp;drone)=delete']]],
+  ['duck_137',['Duck',['../classDuck.html#a45299aa13569c45ff174b2f51b8b4954',1,'Duck']]]
 ];

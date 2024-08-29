@@ -1,6 +1,0 @@
-<map id="BatteryDecorator" name="BatteryDecorator">
-<area shape="rect" id="node1" title="A class to decorate a drone with a battery." alt="" coords="41,95,175,121"/>
-<area shape="rect" id="node2" href="$classIEntity.html" title="Abstract controller class used in the Transit Service. Uses the Model View Controller Pattern." alt="" coords="5,5,69,32"/>
-<area shape="rect" id="node3" href="$classIStrategy.html" title="Strategy (routing) class." alt="" coords="107,5,189,32"/>
-<area shape="rect" id="node4" href="$classVector3.html" title="A class built solely to handle 3D vector mathematics." alt="" coords="213,5,285,32"/>
-</map>

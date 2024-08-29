@@ -1,0 +1,21 @@
+digraph "IEntity"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="IEntity",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Abstract controller class used in the Transit Service. Uses the Model View Controller Pattern."];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="BatteryDecorator",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classBatteryDecorator.html",tooltip="A class to decorate a drone with a battery."];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="Car",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classCar.html",tooltip="Represents a car in a physical system. Cars move using euler integration based on a specified velocit..."];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="Drone",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classDrone.html",tooltip="Represents a drone in a physical system. Drones move using euler integration based on a specified vel..."];
+  Node1 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="Duck",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classDuck.html",tooltip=" "];
+  Node1 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node6 [label="Helicopter",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classHelicopter.html",tooltip="helicopter class."];
+  Node1 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node7 [label="RechargeStation",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classRechargeStation.html",tooltip="A class representing a recharge station."];
+  Node1 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node8 [label="Robot",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classRobot.html",tooltip="Robot class inherits IEntity."];
+}
