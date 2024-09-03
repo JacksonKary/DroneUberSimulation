@@ -1,14 +1,34 @@
 # Drone Uber Simulation
 
-#### This project is a drone Uber simulation, which simulates drones providing an Uber-like service for robots. 
+## Table of Contents
 
-Trips can be scheduled using different routing algorithms, including AStar, Depth First Search, and Dijkstra. Scheduling a trip involves choosing a name for the robot, a routing algorithm, and a specific start and end point. 
-Once a trip is scheduled, the drone, from whatever position it is currently in, will pick the robot up from the starting point and drop it off at the endpoint. However, the drones also have a limited amount of battery, which means that if the drone cannot complete a trip without charging, it finds a charging station first to recharge its battery. Pay attention when they reach the destination, there's a little surprise when they arrive! Also be sure to observe the environment, there are additional entities sharing this world.
+- [Description](#Description)
+- [Video Demonstrations](#Video-Demonstrations)
+- [Instructions](#Instructions)
+- [What's in this directory?](#What's-in-this-directory?)
+
+
+## Description
+
+### This project is a drone Uber simulation, which simulates a drone providing an Uber-like service for robots. 
+
+Using the scheduling page, you can schedule trips/rides for robots. Scheduling a trip creates a robot that the drone will then pick up and bring to its destination.
+
+Scheduling a trip involves choosing a name for the robot, a specific start and end point on the map, and optionally a routing algorithm.
+Once a trip is scheduled, the drone, from whatever position it is currently in, will pick the robot up from the starting point and drop it off at the endpoint. However, the drones also have a limited amount of battery, which means that if the drone cannot complete a trip without charging, it finds a charging station first to recharge its battery. Pay attention when they reach the destination - there's a little surprise when they arrive! Also be sure to observe the environment, there are additional entities sharing this world.
 
 *This project was developed by myself and two others. Our development process was a modified version of Scrum.*
 
+### The Simulation:
+The simulation model is made with a graph that has the ability to create paths from one point to another with different routing algorithms (AStar, Depth First Search, or Dijkstra). Within the simulation, there are entities (objects in the simulation) that inherit from the IEntity interface. These entities include drones, helicopters, cars, recharge stations, and robots.
 
-## Here are some video demonstrations of the final build:
+During the simulation, physical entities (that are represented with .glb models in the scene) are created in the SimulationModel using their respective factories. The SimulationModel uses the CompositeFactory, which handles holding all relevant factories to the simulation (e.g. HelicopterFactory, DroneFactory, RobotFactory, etc.) and creates the entities.
+
+The helicopter, car, ducks, and recharge stations do not have any specific functionalities. Helicopters and cars are elements that continuously move to random points on the map (ducks meet near the river), while the recharge stations are immobile and serve as a physical representation. As for the drone, it handles trips by using certain strategies (that inherit from the interface IStrategy) to get the robot to its destination. These strategies are based on the 3 algorithms mentioned above (AStar, Depth First Search, or Dijkstra). When the drone does not have a robot, the drone also uses a “Beeline” algorithm, meaning it goes in a straight path from its starting position to its destination.
+
+Once a drone finishes a trip (after the drone picks up the robot and brings it to its destination), the drone and robot will also celebrate by jumping, spinning, or both, depending on which strategy was used. This is done with the CelebrationDecorator class and its child classes, JumpDecorator and SpinDecorator. These classes wrap around the strategies (IStrategy) to change the end behavior of the strategies (so that the entities celebrate).
+
+## Video Demonstrations
 
 This first video shows a full trip with the camera focused on the drone. (The video was sped up significantly in post)
 
@@ -25,7 +45,7 @@ https://user-images.githubusercontent.com/117691954/208200732-93d0637a-1df3-4126
 
 
 
-## Instructions for running the simulation:
+## Instructions
 **Try it out for yourself!**
 
 ### A full containerized version with instructions is available on my Docker Hub: https://hub.docker.com/repository/docker/jacksonkary917/drone_final
@@ -64,7 +84,7 @@ https://user-images.githubusercontent.com/117691954/208200732-93d0637a-1df3-4126
   - In another tab, navigate to http://127.0.0.1:8081/schedule.html and you should see a page to schedule the trips.
 
 
-## What is in this directory?
+## What's in this directory?
 <ul>
   <li>  <code>app</code> folder, which contains:
     <ul>
